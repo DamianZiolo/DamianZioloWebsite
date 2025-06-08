@@ -249,6 +249,20 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        object-fit: contain;
+        height: auto;
+    }
+}
+
+
 .mobile-nav-toggle {
   display: none;
 }
