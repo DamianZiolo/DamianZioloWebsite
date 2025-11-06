@@ -218,77 +218,304 @@
 
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
-              <h2>Skills</h2>
-              <!--<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>-->
-          </div><!-- End Section Title -->
+    <h2>Skills</h2>
+</div>
 
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
 
-              <div class="row skills-content skills-animation">
+        <!-- Left Column -->
+        <div class="col-lg-6">
+            <h4>C++</h4>
+            <ul>
+                <li>Standard Template Library (STL) – vector, map, array, smart pointers</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>Advanced language features:
+                    <ul>
+                        <li>Rule of 5</li>
+                        <li>Templates</li>
+                        <li>Move semantics (std::move)</li>
+                    </ul>
+                </li>
+                <li>SDL – window management, rendering, input handling</li>
+                <li>Creating simple 2D games using SDL (render loop, event system, loading assets)</li>
+            </ul>
 
-                  <div class="col-lg-6">
+            <h4>C# / Unity</h4>
+            <ul>
+                <li>Unity 2D and 3D – gameplay logic</li>
+                <li>Component system (MonoBehaviour, events, lifecycle)</li>
+                <li>Scriptable Objects – data configurations</li>
+                <li>Prefabs, animation system, particle system</li>
+                <li>Scene and asset management</li>
+            </ul>
+        </div>
 
-                      <div class="progress">
-                          <h5><span class="skill"><span>C++</span> <i class="val">65%</i></span></h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
+        <!-- Right Column -->
+        <div class="col-lg-6">
+            <h4>Web (HTML / CSS / JavaScript)</h4>
+            <ul>
+                <li>Creating simple websites and layouts</li>
+                <li>Responsive design, CSS animations</li>
+                <li>Basic DOM manipulation with JavaScript</li>
+                <li>Creating website with wordpress</li>
+            </ul>
 
-                      <div class="progress">
-                          <h5> <span class="skill"><span>C#</span> <i class="val">65%</i></span></h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
+            <h4>Blender</h4>
+            <ul>
+                <li>3D modelling</li>
+                <li>UV mapping</li>
+                <li>Texturing</li>
+                <li>Model export for game engines</li>
+            </ul>
 
-                      <div class="progress">
-                          <h5>    <span class="skill"><span>HTML/CS/JS</span> <i class="val">55%</i></span> </h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
+            <h4>Photoshop</h4>
+            <ul>
+                <li>Graphic and asset editing</li>
+                <li>Retouching and UI element preparation</li>
+            </ul>
 
-                  </div>
+            <h4>Git</h4>
+            <ul>
+                <li>Basic team workflow</li>
+                <li>Branching, merging</li>
+                <li>GitHub / GitLab</li>
+            </ul>
+        </div>
 
-                  <div class="col-lg-6">
-
-                      <div class="progress">
-                          <h5> <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span> </h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
-
-                      <div class="progress">
-                          <h5><span class="skill"><span>Blender</span> <i class="val">55%</i></span></h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
-
-                      <div class="progress">
-                          <h5><span class="skill"><span>Git</span> <i class="val">65%</i></span> </h5>
-                          <div class="progress-bar-wrap">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                      </div><!-- End Skills Item -->
-
-                  </div>
-
-                  <div class="col-12 mt-3">
+        <div class="col-12 mt-3">
                       <h4> <p><strong>I hold a category B driving license.</strong></p> </h4>
-                  </div>
+        </div>
 
-              </div>
+    </div>
+</div>
 
-          </div>
+                  
 
       </section><!-- /Skills Section -->
       <!-- Resume Section -->
+      
+<!-- Portfolio section: game-by-game showcase with clickable detail modal -->
+<section id="portfolio" class="portfolio section light-background" aria-labelledby="portfolio-heading">
+  <div class="container section-title">
+    <h2 id="portfolio-heading">Portfolio</h2>
+    <p>
+     Below, each project is displayed individually (title, description, repository, collaborators, screenshot, and video). Click the project header to expand the details.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="projects-list">
+ <!-- Projekt 1 -->
+<details class="project">
+  <summary class="project-summary">
+    <img class="thumb" src="assets/img/portfolio/Moonlighter.png" alt="Moonlighter poster">
+    <div class="summary-text">
+      <h3>Moonlighter - Clone</h3>
+      <p class="short">
+        During my studies, one of our assignments was to recreate a portion of an existing game. I chose Moonlighter, and developed the project in C++ using SDL.
+      </p>
+    </div>
+  </summary>
+
+  <div class="project-body">
+    <div class="media">
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/Moonlighter.png" alt="Moonlighter screenshot" class="screenshot">
+      </a>
+
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/Moonlighter2.png" alt="Moonlighter screenshot" class="screenshot">
+      </a>
+
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/Moonlighter3.png" alt="Moonlighter screenshot" class="screenshot">
+      </a>
+    </div>
+
+    <section class="project-details">
+      <h4>Description</h4>
+      <p>
+        In the game, I built from scratch a 2D collision system, movement and combat mechanics, simple enemy AI, a health system, an animation system, item drops from defeated enemies, as well as room transitions with an easily extendable system for adding new rooms and obstacles. All graphics are from the original game.
+      </p>
+      <h4>Repository</h4>
+      <p><a href="https://github.com/DamianZiolo/Moonlighter-clone" target="_blank" rel="noopener">github of Moonlighter-clone</a></p>
+
+      <h4>This is a solo project</h4>
+    </section>
+  </div>
+</details>
+
+<details class="project">
+  <summary class="project-summary">
+    <img class="thumb" src="assets/img/portfolio/robotGame.png" alt="Moonlighter poster">
+    <div class="summary-text">
+      <h3>Project A.N.G.E.L - 3D Roguelike</h3>
+      <p class="short">
+        During a 184-hour summer internship, I participated in a 6-person team to develop A.N.G.E.L, a 3D roguelike game about a robot fighting a rogue artificial intelligence. I was responsible for implementing movement mechanics, programming robot parts and their attacks, implementing animations, and designing and coding the boss room. </p>
+    </div>
+  </summary>
+
+  <div class="project-body">
+    <div class="media">
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/robotGame.png" alt="robotGame screenshot" class="screenshot">
+      </a>
+
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/robotGame.png" alt="robotGame screenshot" class="screenshot">
+      </a>
+
+      <a href="https://youtu.be/kaSeVxJUSeQ?si=cukdNnfoLLoHjacz" target="_blank" rel="noopener">
+        <img src="assets/img/portfolio/robotGame.png" alt="robotGame screenshot" class="screenshot">
+      </a>
+    </div>
+
+    <section class="project-details">
+      <h4>Description</h4>
+      <p>
+       A.N.G.E.L is a 3D roguelike game in which players control a robot navigating the floors of a scrapyard. Players can fight enemies, take control of hostile robots, and upgrade their own systems. The game features procedurally designed levels, challenging combat mechanics, and unique boss encounters. </p>
+      <h4>Repository</h4>
+      <p><a href="https://github.com/Bartex890/Project-ANGEL" target="_blank" rel="noopener">github of Project-ANGEL</a></p>
+
+      <h4>Co-workers</h4>
+      - Zuzanna Pawluk
+      - Helena Sawicka
+      - Bartosz Kułakowski
+      - Domiki Sieklucki
+      - Łukasz Stąporek
+    </section>
+  </div>
+</details>
+
+    
+
+    <!-- Dodatkowe projekty: tylko filmiki, bez repo -->
+    <div class="additional-projects">
+      <h3>Extra projects, prototypes, gamejam projects</h3>
+
+      <div class="extra-grid">
+        <figure class="extra-item">
+        <figcaption>Tower Defence</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=GLUpYZ7LaQvcw7wF" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/TowerDefence.png" alt="Tower Defence video thumbnail" class="screenshot">
+        </a>
+        </figure>
+
+         <figure class="extra-item">
+        <figcaption>Survivor Game 3D</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=ueVFAn7B5jXp2PGB" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/SurvivorGame3D.png" alt="Survivor Game 3D" class="screenshot">
+        </a>
+        </figure>
+
+          <figure class="extra-item">
+        <figcaption>Racing Game</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=ueVFAn7B5jXp2PGB" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/RacingGame.png" alt="Racing Game" class="screenshot">
+        </a>
+        </figure>
+
+         <figure class="extra-item">
+        <figcaption>Strategy Game</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=ueVFAn7B5jXp2PGB" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/StrategyGame.png" alt="Strategy Game" class="screenshot">
+        </a>
+        </figure>
+
+        <figure class="extra-item">
+        <figcaption>Survivor Game 2D</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=ueVFAn7B5jXp2PGB" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/Survivor2D.png" alt="Survivor Game 2D" class="screenshot">
+        </a>
+        </figure>
+
+<figure class="extra-item">
+        <figcaption>Educational Game about history</figcaption>
+        <a href="https://youtu.be/jpwb40E1y7A?si=ueVFAn7B5jXp2PGB" target="_blank" rel="noopener">
+            <img src="assets/img/portfolio/EducationalGame.png" alt="EducationalGame" class="screenshot">
+        </a>
+        </figure>
+
+        <!-- Dodaj kolejne filmiki w razie potrzeby -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --max-width:1100px;
+      --card-bg: #ffffff;
+      --panel-bg: #0f1720;
+      --accent: #cfe7ff;
+      --muted: #6b7280;
+    }
+
+    .container { max-width:var(--max-width); margin:0 auto; padding:1rem; }
+    .section-title h2 { margin:0 0 .25rem; font-size:2rem; }
+    .projects-list { display:flex; flex-direction:column; gap:1rem; margin-top:1rem; }
+
+    details.project {
+      background:var(--card-bg);
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.04);
+    }
+
+    /* summary as header */
+    .project-summary {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      padding:.8rem;
+      cursor:pointer;
+      user-select:none;
+    }
+    .project-summary .thumb { width:96px; height:64px; object-fit:cover; border-radius:6px; }
+    .project-summary h3 { margin:0; font-size:1.05rem; }
+    .project-summary .short { margin: .25rem 0 0; color:var(--muted); font-size:.95rem; }
+
+    /* expanded content */
+    .project-body { padding:1rem; border-top:1px solid rgba(0,0,0,.04); background:linear-gradient(180deg, rgba(250,250,250,1), rgba(245,247,250,1)); }
+    .media { display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start; }
+    .screenshot { width:320px; height:180px; object-fit:cover; border-radius:6px; border:1px solid rgba(0,0,0,.04); }
+    .video-wrap { flex:1; min-width:280px; height:180px; }
+    .video-wrap iframe { width:100%; height:100%; border-radius:6px; }
+
+    .project-details { margin-top:1rem; }
+    .project-details h4 { margin: .6rem 0 .25rem; color:rgb(67, 126, 184); }
+    .project-details p { margin:0 0 .5rem; color:#111827; }
+    .project-details ul { margin:0 0 0 1.1rem; padding:0; }
+
+    /* Dodatkowe projekty */
+    .additional-projects { margin-top:2rem; background:transparent; padding:0; }
+    .additional-projects h3 { margin-bottom:.25rem; }
+    .extra-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin-top:.8rem; }
+    .extra-item { background:#fff; padding:.6rem; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.04); }
+    .extra-item figcaption { margin:0 0 .5rem; font-weight:600; }
+
+    /* accessibility: visible focus */
+    summary:focus { outline:3px solid rgba(99,102,241,.3); outline-offset:2px; border-radius:6px; }
+    summary::-webkit-details-marker { display:none; } /* hide default triangle for nicer look (chrome) */
+
+    @media (max-width:700px) {
+      .media { flex-direction:column; }
+      .screenshot { width:100%; height:200px; }
+      .video-wrap { height:200px; min-width:100%; }
+      .project-summary .thumb { width:80px; height:56px; }
+    }
+  </style>
+</section>
+
+
+
+      
+
       <section id="resume" class="resume section">
 
-          <!-- Section Title
+          <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
            <!--<h2>Resume</h2>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
@@ -424,364 +651,6 @@
           </div>
 
       </section><!-- /Resume Section -->
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section light-background">
-
-          <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
-              <h2>Portfolio</h2>
-              <p>During my studies, I had the opportunity to develop several game projects — including both mobile and PC games — using Unity, as well as creating games solely with C++ and OpenGL.</p>
-          </div><!-- End Section Title -->
-
-          <div class="container">
-
-              <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-                  <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                      <li data-filter="*" class="filter-active">All</li>
-                      <li data-filter=".filter-app">Sylvan Secrets</li>
-                      <li data-filter=".filter-product">Moonligter Clone</li>
-                      <li data-filter=".filter-branding">Trucks Trails and Troublemakers</li>
-                      <li data-filter=".filter-books">War of Gods</li>
-                  </ul><!-- End Portfolio Filters -->
-
-                  <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/app-1.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Sylvan Secrets</h4>
-                                  <p>Sylvan Secrets monsters</p>
-                                  <a href="assets/img/portfolio/app-1.png" title="Sylvan Secrets is a mobile survival game developed in Unity using Elympics' multiplayer API in C#. The goal is to survive as long as possible while facing waves of attacking enemies. The game emphasizes fast-paced action and strategic movement in an ever-intensifying arena." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/app-2.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Sylvan Secrets</h4>
-                                  <p>Bunny spells</p>
-                                  <a href="assets/img/portfolio/app-2.png" title="Sylvan Secrets is a mobile survival game developed in Unity using Elympics' multiplayer API in C#. The goal is to survive as long as possible while facing waves of attacking enemies. The game emphasizes fast-paced action and strategic movement in an ever-intensifying arena." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/app-3.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Sylvan Secrets</h4>
-                                  <p>Ability system</p>
-                                  <a href="assets/img/portfolio/app-3.png" title="Sylvan Secrets is a mobile survival game developed in Unity using Elympics' multiplayer API in C#. The goal is to survive as long as possible while facing waves of attacking enemies. The game emphasizes fast-paced action and strategic movement in an ever-intensifying arena." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--    <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/product-1.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Moonlighter Clone</h4>
-                                  <p>Moonlighter Clone starting room.</p>
-                                  <a href="assets/img/portfolio/product-1.png" title="Moonlighter Clone is a solo university project created during a Programming 2 course. Developed entirely in C++ with OpenGL and no game engine, it replicates core mechanics from Moonlighter by 11 bit studios, including hand-coded enemy AI, collisions, item systems, and combat mechanics." data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--         <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/product-2.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Moonlighter Clone</h4>
-                                  <p>Moonlighter Pink Slime</p>
-                                  <a href="assets/img/portfolio/product-2.png" title="Moonlighter Clone is a solo university project created during a Programming 2 course. Developed entirely in C++ with OpenGL and no game engine, it replicates core mechanics from Moonlighter by 11 bit studios, including hand-coded enemy AI, collisions, item systems, and combat mechanics." data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/product-3.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Moonlighter Clone</h4>
-                                  <p>Moonlighter Clone flying golem and tower golems.</p>
-                                  <a href="assets/img/portfolio/product-3.png" title="Moonlighter Clone is a solo university project created during a Programming 2 course. Developed entirely in C++ with OpenGL and no game engine, it replicates core mechanics from Moonlighter by 11 bit studios, including hand-coded enemy AI, collisions, item systems, and combat mechanics." data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/branding-1.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Trucks, Trails and Troublemakers</h4>
-                                  <p>Racetrack</p>
-                                  <a href="assets/img/portfolio/branding-1.png" title="Trucks Trails and Troublemakers is a competitive racing game for 2 to 6 players, developed in Unity using Elympics' API in C#. Players race through chaotic tracks while using special abilities like ice walls and bubbles to hinder opponents and gain an advantage." data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!--                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/branding-2.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Trucks, Trails and Troublemakers</h4>
-                                  <p>Menu of the game</p>
-                                  <a href="assets/img/portfolio/branding-2.png" title="Trucks Trails and Troublemakers is a competitive racing game for 2 to 6 players, developed in Unity using Elympics' API in C#. Players race through chaotic tracks while using special abilities like ice walls and bubbles to hinder opponents and gain an advantage." data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/branding-3.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>Trucks, Trails and Troublemakers</h4>
-                                  <p>Car trapped in bubble.</p>
-                                  <a href="assets/img/portfolio/branding-3.png" title="Trucks Trails and Troublemakers is a competitive racing game for 2 to 6 players, developed in Unity using Elympics' API in C#. Players race through chaotic tracks while using special abilities like ice walls and bubbles to hinder opponents and gain an advantage." data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/books-1.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>War of Gods</h4>
-                                  <p>Player fighting with mobs</p>
-                                  <a href="assets/img/portfolio/books-1.png" title="War of Gods is a turn-based strategy game inspired by Heroes of Might and Magic, set in a world based on Slavic mythology. Players control a tribe devoted to a chosen Slavic god and battle each other in a local hot-seat multiplayer mode. The game was created in Unity using C#." data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/books-2.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>War of Gods</h4>
-                                  <p>Secter Altern in the middle of the map</p>
-                                  <a href="assets/img/portfolio/books-2.png" title="War of Gods is a turn-based strategy game inspired by Heroes of Might and Magic, set in a world based on Slavic mythology. Players control a tribe devoted to a chosen Slavic god and battle each other in a local hot-seat multiplayer mode. The game was created in Unity using C#." data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-                          <div class="portfolio-content h-100">
-                              <img src="assets/img/portfolio/books-3.png" class="img-fluid" alt="">
-                              <div class="portfolio-info">
-                                  <h4>War of Gods</h4>
-                                  <p>Special building and place to build structure</p>
-                                  <a href="assets/img/portfolio/books-3.png" title="War of Gods is a turn-based strategy game inspired by Heroes of Might and Magic, set in a world based on Slavic mythology. Players control a tribe devoted to a chosen Slavic god and battle each other in a local hot-seat multiplayer mode. The game was created in Unity using C#." data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                              </div>
-                          </div>
-                      </div><!-- End Portfolio Item -->
-
-                  </div><!-- End Portfolio Container -->
-
-              </div>
-
-          </div>
-
-      </section><!-- /Portfolio Section -->
-      <!-- Services Section
-    <section id="services" class="services section">
-
-        <!-- Section Title
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Services</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div><!-- End Section Title
-
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-                </div>
-                <!-- End Service Item
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                    </div>
-                </div><!-- End Service Item
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                    </div>
-                </div><!-- End Service Item
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                </div><!-- End Service Item
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                    </div>
-                </div><!-- End Service Item
-
-                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-                    <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-                    <div>
-                        <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-                    </div>
-                </div><!-- End Service Item
-
-            </div>
-
-        </div>
-
-        <!--
-    </section><!-- /Services Section -->
-      <!-- Testimonials Section -
-    <section id="testimonials" class="testimonials section light-background">
-
-        <!-- Section Title
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Testimonials</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                    {
-                      "loop": true,
-                      "speed": 600,
-                      "autoplay": {
-                        "delay": 5000
-                      },
-                      "slidesPerView": "auto",
-                      "pagination": {
-                        "el": ".swiper-pagination",
-                        "type": "bullets",
-                        "clickable": true
-                      },
-                      "breakpoints": {
-                        "320": {
-                          "slidesPerView": 1,
-                          "spaceBetween": 40
-                        },
-                        "1200": {
-                          "slidesPerView": 3,
-                          "spaceBetween": 1
-                        }
-                      }
-                    }
-                </script>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                        </div>
-                    </div><!-- End testimonial item
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                        </div>
-                    </div><!-- End testimonial item
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                        </div>
-                    </div><!-- End testimonial item
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                        </div>
-                    </div><!-- End testimonial item
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                        </div>
-                    </div><!-- End testimonial item
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-
-    </section><!-- /Testimonials Section -->
       <!-- Contact Section -->
       <section id="contact" class="contact section">
 
