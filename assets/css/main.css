@@ -1288,3 +1288,129 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+#portfolio details.project:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+#portfolio .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+#portfolio .projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+#portfolio details.project {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+#portfolio .project-summary {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#portfolio .project-summary .thumb {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+#portfolio .project-summary h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+#portfolio .project-summary .short {
+  margin: .45rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+#portfolio .project-body {
+  padding: 1.35rem;
+  border-top: 1px solid rgba(0,0,0,.04);
+  background: linear-gradient(180deg, rgba(250,250,250,1), rgba(245,247,250,1));
+}
+
+#portfolio .media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.25rem;
+}
+
+#portfolio .screenshot {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+#portfolio .project-details {
+  margin-top: 1.25rem;
+}
+
+#portfolio .project-details h4 {
+  margin: .9rem 0 .35rem;
+  color: rgb(67, 126, 184);
+  font-size: 1.1rem;
+}
+
+#portfolio .project-details p,
+#portfolio .project-details li {
+  color: #111827;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+#portfolio .project-details ul {
+  margin: 0 0 0 1.25rem;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  #portfolio .project-summary {
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #portfolio .project-summary .thumb {
+    width: 110px;
+    height: 74px;
+  }
+
+  #portfolio .project-summary h3 {
+    font-size: 1.15rem;
+  }
+
+  #portfolio .project-summary .short {
+    font-size: 0.98rem;
+  }
+
+  #portfolio .media {
+    grid-template-columns: 1fr;
+  }
+
+  #portfolio .screenshot {
+    height: 220px;
+  }
+}
