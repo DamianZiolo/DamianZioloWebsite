@@ -344,6 +344,91 @@
         </div>
       </details>
 
+      <!-- Project 5 -->
+<details class="project" data-engine="unreal" data-tags="unreal cpp ai simulation ecosystem">
+  <summary class="project-summary">
+    <img class="thumb" src="assets/img/portfolio/ecosystem1.png" alt="Ecosystem Simulation poster">
+    <div class="summary-text">
+      <h3>Ecosystem Simulation</h3>
+      <p class="short">
+        A solo Unreal Engine 5 project focused on creating a dynamic ecosystem simulation where predators, prey, and plants interact autonomously.
+      </p>
+
+      <div class="tags">
+        <span class="tag tag-unreal">Unreal Engine 5</span>
+        <span class="tag tag-cpp">C++ / Blueprints</span>
+        <span class="tag tag-ai">Game AI</span>
+      </div>
+    </div>
+  </summary>
+
+  <div class="project-body">
+    <div class="media">
+      <img src="assets/img/portfolio/ecosystem2.png" alt="Ecosystem Simulation screenshot" class="screenshot">
+
+      <img src="assets/img/portfolio/ecosystem3.png" alt="Ecosystem Simulation screenshot" class="screenshot">
+    </div>
+
+    <section class="project-details">
+      <h4>Description</h4>
+      <p>
+        Ecosystem Simulation is a solo research project developed entirely by me in Unreal Engine 5.  
+        The main goal of the project was to explore how biological ecosystem principles can be translated into interactive game systems and autonomous AI behaviors.
+      </p>
+
+      <p>
+        The simulation is based on interactions between three main elements of the ecosystem: plants, prey, and predators.  
+        Each unit operates independently and follows its own survival logic driven by hunger, movement, reproduction conditions, and environmental interactions.  
+        Prey search for plants while simultaneously avoiding predators, predators hunt prey to survive, and plants slowly spread across the environment over time.
+      </p>
+
+      <p>
+        One of the primary focuses of the project was creating a system where the world evolves dynamically without direct player control.  
+        Instead of scripted events, the ecosystem changes naturally depending on population growth, food availability, and chain reactions caused by the interaction between species.  
+        This allows every simulation to behave differently and creates unpredictable outcomes based on the initial conditions defined by the player.
+      </p>
+
+      <p>
+        The project also explores how ecosystem simulations can be used in game development to create more believable and immersive worlds.  
+        Dynamic ecosystems can improve replayability, support environmental storytelling, and introduce strategic gameplay elements by forcing players to adapt to constantly changing conditions.
+      </p>
+
+      <p>
+        During development, I designed and implemented the complete gameplay framework, AI behaviors, simulation logic, UI systems (setting starting condition of simulation).  
+        The project was created as both a technical experiment and a study of ecosystem-based systems in games.
+      </p>
+
+      <h4>Features</h4>
+      <ul>
+        <li>Autonomous prey and predator AI behaviors</li>
+        <li>Dynamic plant growth and spreading system</li>
+        <li>Reproduction and survival mechanics</li>
+        <li>Simulation speed control</li>
+        <li>Real-time ecosystem statistics visualization</li>
+        <li>Configurable starting conditions</li>
+      </ul>
+
+      <h4>Developed with</h4>
+      <p>
+        <strong>Engine:</strong> Unreal Engine 5<br>
+        <strong>Language:</strong> C++ / Blueprints
+      </p>
+
+      <h4>Repository</h4>
+      <p>
+        <a href="https://github.com/DAE-GD-2025-2026/gameai-research-project-DamianZiolo" target="_blank" rel="noopener">
+          GitHub - Ecosystem Simulation
+        </a>
+      </p>
+
+      <h4>Team</h4>
+      <ul>
+        <li>Design, Programming & Simulation Systems – Damian Zioło</li>
+      </ul>
+    </section>
+  </div>
+</details>
+
       <!-- Project 2 -->
       <details class="project" data-engine="unity" data-tags="unity csharp roguelike">
         <summary class="project-summary">
@@ -522,7 +607,7 @@
       <!-- Flameborn -->
       <details class="project" data-engine="unreal" data-tags="unreal cpp blueprints prototype ai multiplayer">
         <summary class="project-summary">
-          <img class="thumb" src="assets/img/portfolio/Flameborn.png" alt="Flameborn poster">
+          <img class="thumb" src="assets/img/portfolio/Flameborn1.png" alt="Flameborn poster">
           <div class="summary-text">
             <h3>Flameborn – Gameplay Prototype</h3>
             <p class="short">
@@ -540,19 +625,46 @@
         <div class="project-body">
           <div class="media">
             <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
-              <img src="assets/img/portfolio/Flameborn2.gif" alt="Flameborn screenshot" class="screenshot">
+              <img src="assets/img/portfolio/Flameborn2.png" alt="Flameborn screenshot" class="screenshot">
             </a>
 
             <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
-              <img src="assets/img/portfolio/Flameborn3.gif" alt="Flameborn screenshot" class="screenshot">
+              <img src="assets/img/portfolio/Flameborn3.png" alt="Flameborn screenshot" class="screenshot">
             </a>
           </div>
 
           <section class="project-details">
             <h4>Description</h4>
             <p>
-              Flameborn is a cooperative gameplay prototype where four fire warriors defend a central flame against waves of incoming enemies. 
-              I was responsible for implementing enemy behavior and combat systems using both Blueprints and C++.
+              Flameborn is a cooperative gameplay prototype where four fire warriors defend a central flame against waves of incoming enemies.  
+              The project focused on creating dynamic combat encounters and enemy AI behaviors that would constantly pressure players to balance defense, positioning, and teamwork.
+            </p>
+
+            <p>
+              I was primarily responsible for developing the entire enemy AI system using Unreal Engine Behavior Trees together with custom C++ systems and Blueprints integration.  
+              During development, I created three different enemy archetypes:
+            </p>
+
+            <ul>
+              <li><strong>Ground Enemies</strong> – standard melee units focused on attacking players and overwhelming defenses.</li>
+              <li><strong>Runner Enemies</strong> – fast units designed to avoid players and directly attack the central flame that explode in close contact.</li>
+              <li><strong>Boss Enemy</strong> – a stronger enemy type with big attack range that increased pressure on the players.</li>
+            </ul>
+
+            <p>
+              One of the main technical challenges was designing AI decision-making systems that allowed enemies to dynamically choose between attacking players or targeting the central flame — the core objective players needed to protect.  
+              Enemies had to intelligently navigate around obstacles, react to changing situations, and continuously evaluate priorities during combat encounters.
+            </p>
+
+            <p>
+              Another significant challenge was implementing crowd control and movement management systems.  
+              Since large groups of enemies were active simultaneously, units frequently became stuck on one another during navigation.  
+              To solve this, I worked on crowd avoidance and movement optimization systems to improve enemy flow and maintain smooth large-scale combat behavior.
+            </p>
+
+            <p>
+              I was also responsible for creating the wave system that controlled enemy spawning, encounter pacing, and gameplay progression.  
+              Integrating the spawning systems, AI behaviors, combat logic, and gameplay balancing into the larger project architecture was one of the most complex parts of the development process.
             </p>
 
             <h4>Developed with</h4>
