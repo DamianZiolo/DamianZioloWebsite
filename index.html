@@ -34,6 +34,156 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    /* Project gallery carousel + fullscreen preview */
+    .project-gallery {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.5rem 3.25rem 1rem;
+      scrollbar-width: thin;
+    }
+
+    .project-gallery img,
+    .project-gallery .screenshot {
+      flex: 0 0 min(100%, 560px);
+      width: min(100%, 560px);
+      height: auto;
+      object-fit: cover;
+      scroll-snap-align: center;
+      cursor: zoom-in;
+      border-radius: 12px;
+    }
+
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .gallery-btn:hover {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .gallery-btn.prev {
+      left: 0.5rem;
+    }
+
+    .gallery-btn.next {
+      right: 0.5rem;
+    }
+
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.92);
+      padding: 2rem;
+    }
+
+    .image-modal.open {
+      display: flex;
+    }
+
+    .image-modal img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .image-modal button {
+      position: absolute;
+      border: 0;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .image-modal button:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .image-modal .modal-close {
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .image-modal .modal-prev {
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .image-modal .modal-next {
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
+    .project[data-favourite="true"] {
+      border: 2px solid rgba(255, 193, 7, 0.55);
+      box-shadow: 0 10px 30px rgba(255, 193, 7, 0.12);
+    }
+
+    .favourite-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      width: fit-content;
+      margin-bottom: 0.45rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 193, 7, 0.16);
+      color: #b77900;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .favourite-badge i {
+      color: #ffc107;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .project-gallery {
+        padding-left: 2.75rem;
+        padding-right: 2.75rem;
+      }
+
+      .gallery-btn,
+      .image-modal button {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -67,9 +217,10 @@
     <nav id="navmenu" class="navmenu">
         <ul>
             <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-            <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-            <li><a href="#skills"><i class="bi bi-file-earmark-text navicon"></i> CV</a></li>
+            <li><a href="#skills"><i class="bi bi-file-earmark-text navicon"></i> Skills</a></li>
             <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+            <li><a href="#resume"><i class="bi bi-briefcase navicon"></i> Expirience</a></li>
+            <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
             <li><a href="#dogs"><i class="bi bi-heart navicon"></i>Dogs</a></li>
         </ul>
 
@@ -96,55 +247,6 @@
           </div>
 
       </section><!-- /Hero Section -->
-      <!-- About Section -->
-      <section id="about" class="about section">
-
-          <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
-              <h2>About</h2>
-              <p>
-                  Hi! My name is Damian, and I'm currently studying Game Development at Howest University in Belgium. I'm originally from Poland, where I attended an IT-focused technical high school.
-
-                  Creating games has been my passion long before it became my career path — I started working on my first game at the age of 15, and since then I've been constantly improving my programming skills and exploring different aspects of game development.
-
-                  Outside of coding, I enjoy traveling, playing board games, and practicing sport, especially karate and gym.
-              </p>
-          </div><!-- End Section Title -->
-
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-4">
-                      <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
-                  </div>
-                  <div class="col-lg-8 content">
-                      <h2>C++/C# Developer.</h2>
-                      <p class="fst-italic py-3">
-                          "Choose a job you love, and you will never have to work a day in your life." - Confucius
-                      </p>
-                      <div class="row">
-                          <div class="col-lg-6">
-                              <ul>
-                                  <!--<li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>-->
-                                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kortrijk, Belgium</span></li>
-                                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>During Bachelor Studies</span></li>
-                                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>damian.ziolo999@wp.pl</span></li>
-                                </ul>
-                          </div>
-                          <div class="col-lg-6">
-                              <ul>
-                                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>-->
-                              </ul>
-                          </div>
-                      </div>
-                      
-                  </div>
-              </div>
-
-          </div>
-
-      </section><!-- /About Section -->
-
       <!-- Skills Section -->
 <section id="skills" class="skills section light-background">
 
@@ -249,6 +351,8 @@
 
     </div>
   </div>
+
+</section><!-- /Skills Section -->
 
 <!-- Portfolio section: game-by-game showcase with expandable project details -->
 <section id="portfolio" class="portfolio section light-background" aria-labelledby="portfolio-heading">
@@ -605,10 +709,11 @@
       </details>
 
       <!-- Flameborn -->
-      <details class="project" data-engine="unreal" data-tags="unreal cpp blueprints prototype ai multiplayer">
+      <details class="project" data-engine="unreal" data-tags="unreal cpp blueprints prototype ai multiplayer" data-favourite="true">
         <summary class="project-summary">
           <img class="thumb" src="assets/img/portfolio/Flameborn1.png" alt="Flameborn poster">
           <div class="summary-text">
+            <span class="favourite-badge"><i class="bi bi-star-fill"></i> Favourite Project</span>
             <h3>Flameborn – Gameplay Prototype</h3>
             <p class="short">
               A fast-paced co-op prototype where four fire warriors defend a flame against waves of enemies, developed in a multidisciplinary team using Unreal Engine 5.
@@ -817,6 +922,13 @@
 
     projects
       .sort((a, b) => {
+        const favouriteA = a.dataset.favourite === "true" ? 0 : 1;
+        const favouriteB = b.dataset.favourite === "true" ? 0 : 1;
+
+        if (favouriteA !== favouriteB) {
+          return favouriteA - favouriteB;
+        }
+
         const engineA = engineOrder[a.dataset.engine] || 99;
         const engineB = engineOrder[b.dataset.engine] || 99;
 
@@ -918,9 +1030,6 @@
     </div>
   </div>
 </div>
-
- 
-</section>
 
       <section id="resume" class="resume section">
 
@@ -1086,6 +1195,55 @@
 
       </section><!-- /Resume Section -->
 
+      <!-- About Section -->
+      <section id="about" class="about section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+              <h2>About</h2>
+              <p>
+                  Hi! My name is Damian, and I'm currently studying Game Development at Howest University in Belgium. I'm originally from Poland, where I attended an IT-focused technical high school.
+
+                  Creating games has been my passion long before it became my career path — I started working on my first game at the age of 15, and since then I've been constantly improving my programming skills and exploring different aspects of game development.
+
+                  Outside of coding, I enjoy traveling, playing board games, and practicing sport, especially karate and gym.
+              </p>
+          </div><!-- End Section Title -->
+
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-4">
+                      <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-8 content">
+                      <h2>C++/C# Developer.</h2>
+                      <p class="fst-italic py-3">
+                          "Choose a job you love, and you will never have to work a day in your life." - Confucius
+                      </p>
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <ul>
+                                  <!--<li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>-->
+                                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kortrijk, Belgium</span></li>
+                                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>During Bachelor Studies</span></li>
+                                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>damian.ziolo999@wp.pl</span></li>
+                                </ul>
+                          </div>
+                          <div class="col-lg-6">
+                              <ul>
+                                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>-->
+                              </ul>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+
+          </div>
+
+      </section><!-- /About Section -->
+
 <section id="dogs" class="dogs section light-background">
 
   <div class="container section-title">
@@ -1232,6 +1390,112 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <div class="image-modal" id="image-modal" aria-hidden="true">
+    <button class="modal-close" type="button" aria-label="Close image preview">&times;</button>
+    <button class="modal-prev" type="button" aria-label="Previous image">&#10094;</button>
+    <img src="" alt="">
+    <button class="modal-next" type="button" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const galleries = Array.from(document.querySelectorAll(".project-body .media"));
+      const modal = document.getElementById("image-modal");
+      const modalImg = modal.querySelector("img");
+      const closeBtn = modal.querySelector(".modal-close");
+      const prevModalBtn = modal.querySelector(".modal-prev");
+      const nextModalBtn = modal.querySelector(".modal-next");
+
+      let activeImages = [];
+      let activeIndex = 0;
+
+      const openModal = (images, index) => {
+        activeImages = images;
+        activeIndex = index;
+        modalImg.src = activeImages[activeIndex].src;
+        modalImg.alt = activeImages[activeIndex].alt || "Project screenshot";
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        modalImg.src = "";
+        document.body.style.overflow = "";
+      };
+
+      const showModalImage = (direction) => {
+        if (!activeImages.length) return;
+        activeIndex = (activeIndex + direction + activeImages.length) % activeImages.length;
+        modalImg.src = activeImages[activeIndex].src;
+        modalImg.alt = activeImages[activeIndex].alt || "Project screenshot";
+      };
+
+      galleries.forEach((gallery) => {
+        gallery.classList.add("project-gallery");
+
+        gallery.querySelectorAll("a").forEach((link) => {
+          const img = link.querySelector("img");
+          if (img) {
+            link.replaceWith(img);
+          }
+        });
+
+        const images = Array.from(gallery.querySelectorAll("img"));
+        images.forEach((img, index) => {
+          img.addEventListener("click", () => openModal(images, index));
+        });
+
+        if (images.length > 1) {
+          const prevBtn = document.createElement("button");
+          const nextBtn = document.createElement("button");
+
+          prevBtn.type = "button";
+          nextBtn.type = "button";
+          prevBtn.className = "gallery-btn prev";
+          nextBtn.className = "gallery-btn next";
+          prevBtn.setAttribute("aria-label", "Previous screenshot");
+          nextBtn.setAttribute("aria-label", "Next screenshot");
+          prevBtn.innerHTML = "&#10094;";
+          nextBtn.innerHTML = "&#10095;";
+
+          prevBtn.addEventListener("click", () => {
+            gallery.scrollBy({ left: -gallery.clientWidth * 0.85, behavior: "smooth" });
+          });
+
+          nextBtn.addEventListener("click", () => {
+            gallery.scrollBy({ left: gallery.clientWidth * 0.85, behavior: "smooth" });
+          });
+
+          gallery.prepend(prevBtn);
+          gallery.append(nextBtn);
+        }
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+      prevModalBtn.addEventListener("click", () => showModalImage(-1));
+      nextModalBtn.addEventListener("click", () => showModalImage(1));
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!modal.classList.contains("open")) return;
+
+        if (event.key === "Escape") closeModal();
+        if (event.key === "ArrowLeft") showModalImage(-1);
+        if (event.key === "ArrowRight") showModalImage(1);
+      });
+    });
+  </script>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
