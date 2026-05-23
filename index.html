@@ -414,6 +414,9 @@
             <a href="https://youtu.be/6L3iCD9D_PE?si=7ytVPufs7t-VQVvZ" target="_blank" rel="noopener">
               <img src="assets/img/portfolio/bober3.png" alt="O F*ck! Beaver screenshot" class="screenshot">
             </a>
+            <a href="https://youtu.be/6L3iCD9D_PE?si=7ytVPufs7t-VQVvZ" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/bober4.png" alt="O F*ck! Beaver screenshot" class="screenshot">
+            </a>
           </div>
 
           <section class="project-details">
@@ -1439,6 +1442,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const galleries = Array.from(document.querySelectorAll(".project-body .media"));
+      const dogImages = Array.from(document.querySelectorAll(".dog-gallery img"));
       const modal = document.getElementById("image-modal");
       const modalImg = modal.querySelector("img");
       const closeBtn = modal.querySelector(".modal-close");
@@ -1481,6 +1485,14 @@
             link.replaceWith(img);
           }
         });
+
+      dogImages.forEach((img, index) => {
+        img.style.cursor = "zoom-in";
+
+        img.addEventListener("click", () => {
+          openModal(dogImages, index);
+        });
+      });
 
         const images = Array.from(gallery.querySelectorAll("img"));
         if (!images.length) return;
