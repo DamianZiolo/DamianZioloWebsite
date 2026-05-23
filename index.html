@@ -39,24 +39,27 @@
     /* Project gallery carousel + fullscreen preview */
     .project-gallery {
       position: relative;
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
+      overflow: hidden;
       padding: 0.5rem 3.25rem 1rem;
-      scrollbar-width: thin;
+      width: 100%;
     }
 
-    .project-gallery img,
-    .project-gallery .screenshot {
-      flex: 0 0 min(100%, 560px);
-      width: min(100%, 560px);
-      height: auto;
+    .project-gallery-track {
+      display: flex;
+      gap: 1rem;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    .project-gallery-track img,
+    .project-gallery-track .screenshot {
+      flex: 0 0 calc((100% - 1rem) / 2);
+      width: calc((100% - 1rem) / 2);
+      aspect-ratio: 16 / 9;
       object-fit: cover;
-      scroll-snap-align: center;
       cursor: zoom-in;
       border-radius: 12px;
+      display: block;
     }
 
     .gallery-btn {
@@ -143,7 +146,6 @@
       transform: translateY(-50%);
     }
 
-
     .project[data-favourite="true"] {
       border: 2px solid rgba(255, 193, 7, 0.55);
       box-shadow: 0 10px 30px rgba(255, 193, 7, 0.12);
@@ -174,6 +176,12 @@
       .project-gallery {
         padding-left: 2.75rem;
         padding-right: 2.75rem;
+      }
+
+      .project-gallery-track img,
+      .project-gallery-track .screenshot {
+        flex-basis: 100%;
+        width: 100%;
       }
 
       .gallery-btn,
@@ -736,6 +744,35 @@
             <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
               <img src="assets/img/portfolio/Flameborn3.png" alt="Flameborn screenshot" class="screenshot">
             </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn4.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn5.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn6.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn7.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn8.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+            <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn9.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
+             <a href="https://mariedem.itch.io/gp05flameborn" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/Flameborn10.png" alt="Flameborn screenshot" class="screenshot">
+            </a>
+
           </div>
 
           <section class="project-details">
@@ -1446,34 +1483,62 @@
         });
 
         const images = Array.from(gallery.querySelectorAll("img"));
+        if (!images.length) return;
+
+        gallery.innerHTML = "";
+
+        const track = document.createElement("div");
+        track.className = "project-gallery-track";
+
         images.forEach((img, index) => {
           img.addEventListener("click", () => openModal(images, index));
+          track.appendChild(img);
         });
 
-        if (images.length > 1) {
-          const prevBtn = document.createElement("button");
-          const nextBtn = document.createElement("button");
+        let currentIndex = 0;
 
-          prevBtn.type = "button";
-          nextBtn.type = "button";
-          prevBtn.className = "gallery-btn prev";
-          nextBtn.className = "gallery-btn next";
-          prevBtn.setAttribute("aria-label", "Previous screenshot");
-          nextBtn.setAttribute("aria-label", "Next screenshot");
-          prevBtn.innerHTML = "&#10094;";
-          nextBtn.innerHTML = "&#10095;";
+        const visibleCount = () => window.matchMedia("(max-width: 768px)").matches ? 1 : 2;
 
-          prevBtn.addEventListener("click", () => {
-            gallery.scrollBy({ left: -gallery.clientWidth * 0.85, behavior: "smooth" });
-          });
+        const maxIndex = () => Math.max(0, images.length - visibleCount());
 
-          nextBtn.addEventListener("click", () => {
-            gallery.scrollBy({ left: gallery.clientWidth * 0.85, behavior: "smooth" });
-          });
+        const updateGallery = () => {
+          currentIndex = Math.min(currentIndex, maxIndex());
 
-          gallery.prepend(prevBtn);
-          gallery.append(nextBtn);
-        }
+          const imageWidth = images[0].getBoundingClientRect().width;
+          const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+          const offset = currentIndex * (imageWidth + gap);
+
+          track.style.transform = `translateX(-${offset}px)`;
+        };
+
+        const prevBtn = document.createElement("button");
+        const nextBtn = document.createElement("button");
+
+        prevBtn.type = "button";
+        nextBtn.type = "button";
+        prevBtn.className = "gallery-btn prev";
+        nextBtn.className = "gallery-btn next";
+        prevBtn.setAttribute("aria-label", "Previous screenshot");
+        nextBtn.setAttribute("aria-label", "Next screenshot");
+        prevBtn.innerHTML = "&#10094;";
+        nextBtn.innerHTML = "&#10095;";
+
+        prevBtn.addEventListener("click", () => {
+          currentIndex = currentIndex <= 0 ? maxIndex() : currentIndex - 1;
+          updateGallery();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex = currentIndex >= maxIndex() ? 0 : currentIndex + 1;
+          updateGallery();
+        });
+
+        gallery.appendChild(prevBtn);
+        gallery.appendChild(track);
+        gallery.appendChild(nextBtn);
+
+        updateGallery();
+        window.addEventListener("resize", updateGallery);
       });
 
       closeBtn.addEventListener("click", closeModal);
