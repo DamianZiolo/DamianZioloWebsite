@@ -26,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/portfolio-refresh.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -241,25 +242,35 @@
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
 
-          <picture>
-              <source srcset="assets/img/hero-bg-mobile.png" media="(max-width: 768px)">
-              <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="hero-img">
-          </picture>
+          <!-- Add your showreel as assets/video/showreel.webm and/or showreel.mp4. The poster is shown while it loads or when video is unavailable. -->
+          <video class="hero-video" autoplay muted loop playsinline poster="assets/img/portfolio/Flameborn.png" aria-label="Gameplay showreel">
+              <source src="assets/video/showreel.webm" type="video/webm">
+              <source src="assets/video/showreel.mp4" type="video/mp4">
+          </video>
+          <div class="hero-noise" aria-hidden="true"></div>
 
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="container hero-content" data-aos="fade-up" data-aos-delay="100">
+              <p class="hero-eyebrow">Game developer · C++ / C# · Unreal / Unity</p>
               <h2>Damian Zioło</h2>
               <p>
                   I'm <span class="typed" data-typed-items="a Game Developer in C#/C++,a Programming Instructor,a Howest DAE Game Development Student"></span>
                   <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
               </p>
+              <div class="hero-actions">
+                  <a class="button button-primary" href="#portfolio">Explore projects <i class="bi bi-arrow-down-right"></i></a>
+                  <a class="button button-ghost" href="#contact">Let’s talk</a>
+              </div>
+              <p class="hero-video-note"><i class="bi bi-play-fill"></i> Gameplay showreel</p>
           </div>
+
+          <a class="hero-scroll" href="#portfolio" aria-label="Scroll to portfolio">Scroll to explore <i class="bi bi-arrow-down"></i></a>
 
       </section><!-- /Hero Section -->
       <!-- Skills Section -->
 <section id="skills" class="skills section light-background">
 
   <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title skills-title" data-aos="fade-up">
     <h2>Skills</h2>
   </div>
 
@@ -1401,7 +1412,7 @@
                                   <!--<li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>-->
                                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kortrijk, Belgium</span></li>
                                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>During Bachelor Studies</span></li>
-                                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>damian.ziolo999@wp.pl</span></li>
+                                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>damian.ziolo999@gmail.com</span></li>
                                 </ul>
                           </div>
                           <div class="col-lg-6">
@@ -1517,7 +1528,7 @@
                           <div class="info-item d-flex align-items-start flex-column flex-grow-1 text-center" data-aos="fade-up" data-aos-delay="400">
                               <i class="bi bi-envelope mb-2" style="font-size: 2rem;"></i>
                               <h3>Email Me</h3>
-                              <p>damian.ziolo999@wp.pl</p>
+                              <p>damian.ziolo999@gmail.com</p>
                           </div>
 
                       </div><!-- End Info Items Row -->
@@ -1709,6 +1720,7 @@
 
 
   <!-- Main JS File -->
+  <script src="assets/js/project-links.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
